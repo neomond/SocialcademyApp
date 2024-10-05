@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Post: Identifiable {  /// useful for List or ForEach to display a list of posts and will be indispensable as we add more complex features to our app.
+struct Post: Identifiable, Codable {  /// useful for List or ForEach to display a list of posts and will be indispensable as we add more complex features to our app.
     var title: String
     var content: String
     var authorName: String
