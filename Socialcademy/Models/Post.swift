@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Post: Identifiable, Codable {  /// useful for List or ForEach to display a list of posts and will be indispensable as we add more complex features to our app.
+struct Post: Identifiable, Codable, Equatable {  /// useful for List or ForEach to display a list of posts and will be indispensable as we add more complex features to our app.
     var title: String
     var content: String
     var authorName: String
@@ -29,6 +29,6 @@ extension Post {
     static let testPost = Post(
         title: "Lorem ipsum",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        authorName: "Jamie Harris"
+        authorName: "Nazrin Atayeva"
     )
 }
