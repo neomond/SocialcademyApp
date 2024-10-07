@@ -13,6 +13,7 @@ import FirebaseFirestore
 protocol PostsRepositoryProtocol {
     func fetchPosts() async throws -> [Post]
     func create(_ post: Post) async throws
+    func delete(_ post: Post) async throws
 }
 
 
@@ -27,6 +28,7 @@ struct PostsRepositoryStub: PostsRepositoryProtocol {
     }
     
     func create(_ post: Post) async throws {}
+    func delete(_ post: Post) async throws {}
 }
 #endif
 
@@ -49,6 +51,12 @@ struct PostsRepository: PostsRepositoryProtocol {
         let document = postsReference.document(post.id.uuidString)
         try await document.setData(from: post)
     }
+    
+    func delete(_ post: Post) async throws {
+        let document = postsReference.document(post.id.uuidString)
+        try await document.delete()
+    }
+    
 }
 
 private extension DocumentReference {
