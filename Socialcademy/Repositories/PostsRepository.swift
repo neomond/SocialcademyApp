@@ -12,8 +12,12 @@ import FirebaseFirestore
 
 protocol PostsRepositoryProtocol {
     func fetchPosts() async throws -> [Post]
+    
     func create(_ post: Post) async throws
     func delete(_ post: Post) async throws
+    
+    func favorite(_ post: Post) async throws
+    func unfavorite(_ post: Post) async throws
 }
 
 
@@ -29,6 +33,9 @@ struct PostsRepositoryStub: PostsRepositoryProtocol {
     
     func create(_ post: Post) async throws {}
     func delete(_ post: Post) async throws {}
+    
+    func favorite(_ post: Post) async throws {}
+    func unfavorite(_ post: Post) async throws {}
 }
 #endif
 
@@ -36,7 +43,7 @@ struct PostsRepositoryStub: PostsRepositoryProtocol {
 // MARK: - PostsRepository
 
 struct PostsRepository: PostsRepositoryProtocol {
-    let postsReference = Firestore.firestore().collection("posts")
+    let postsReference = Firestore.firestore().collection("posts_v1") /// version number
     
     func fetchPosts() async throws -> [Post] {
         let snapshot = try await postsReference
@@ -57,6 +64,19 @@ struct PostsRepository: PostsRepositoryProtocol {
         try await document.delete()
     }
     
+    
+    func favorite(_ post: Post) async throws {
+        let document = postsReference.document(post.id.uuidString)
+        try await document.setData(["isFavorite": true], merge: true)
+    }
+    
+    func unfavorite(_ post: Post) async throws {
+        let document = postsReference.document(post.id.uuidString)
+        try await document.setData(["isFavorite": false], merge: true)
+    }
+    
+    /// This obtains a document reference for the given post and uses the setData(_:merge:) method to set the isFavorite property.
+    /// Typically, the setData(_:) method overwrites the document with the given data. By setting the merge parameter to true, we’re telling Cloud Firestore to merge the given data into an existing document instead of overwriting the document entirely.
 }
 
 private extension DocumentReference {

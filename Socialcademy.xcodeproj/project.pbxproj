@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A2B865A2CB5A809004DFE02 /* PostRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B86592CB5A809004DFE02 /* PostRowViewModel.swift */; };
 		7A922EAE2CB04D1D009F3E9C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A922EAD2CB04D1D009F3E9C /* Post.swift */; };
 		7A922EB02CB04EA6009F3E9C /* PostsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A922EAF2CB04EA6009F3E9C /* PostsList.swift */; };
 		7A922EB22CB05687009F3E9C /* PostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A922EB12CB05687009F3E9C /* PostRow.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A2B86592CB5A809004DFE02 /* PostRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRowViewModel.swift; sourceTree = "<group>"; };
 		7A922EAD2CB04D1D009F3E9C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		7A922EAF2CB04EA6009F3E9C /* PostsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsList.swift; sourceTree = "<group>"; };
 		7A922EB12CB05687009F3E9C /* PostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRow.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				7A922EB72CB07523009F3E9C /* PostsViewModel.swift */,
+				7A2B86592CB5A809004DFE02 /* PostRowViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				7A922ED32CB45EF4009F3E9C /* Alert+Error.swift in Sources */,
 				7A922EAE2CB04D1D009F3E9C /* Post.swift in Sources */,
 				7A922EBB2CB127C7009F3E9C /* PostsRepository.swift in Sources */,
+				7A2B865A2CB5A809004DFE02 /* PostRowViewModel.swift in Sources */,
 				7A922EBE2CB1CBB9009F3E9C /* Loadable.swift in Sources */,
 				7AA0EAAB2CAF33FC00A60F26 /* ContentView.swift in Sources */,
 				7A922EC12CB1D3F3009F3E9C /* EmptyListView.swift in Sources */,
