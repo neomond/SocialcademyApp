@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A2B865A2CB5A809004DFE02 /* PostRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B86592CB5A809004DFE02 /* PostRowViewModel.swift */; };
+		7A2B865C2CB6A08F004DFE02 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B865B2CB6A08E004DFE02 /* MainTabView.swift */; };
 		7A922EAE2CB04D1D009F3E9C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A922EAD2CB04D1D009F3E9C /* Post.swift */; };
 		7A922EB02CB04EA6009F3E9C /* PostsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A922EAF2CB04EA6009F3E9C /* PostsList.swift */; };
 		7A922EB22CB05687009F3E9C /* PostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A922EB12CB05687009F3E9C /* PostRow.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		7A2B86592CB5A809004DFE02 /* PostRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRowViewModel.swift; sourceTree = "<group>"; };
+		7A2B865B2CB6A08E004DFE02 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		7A922EAD2CB04D1D009F3E9C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		7A922EAF2CB04EA6009F3E9C /* PostsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsList.swift; sourceTree = "<group>"; };
 		7A922EB12CB05687009F3E9C /* PostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRow.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				7A922EAF2CB04EA6009F3E9C /* PostsList.swift */,
 				7A922EB12CB05687009F3E9C /* PostRow.swift */,
 				7A922EB42CB068E2009F3E9C /* NewPostForm.swift */,
+				7A2B865B2CB6A08E004DFE02 /* MainTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				7A922EBE2CB1CBB9009F3E9C /* Loadable.swift in Sources */,
 				7AA0EAAB2CAF33FC00A60F26 /* ContentView.swift in Sources */,
 				7A922EC12CB1D3F3009F3E9C /* EmptyListView.swift in Sources */,
+				7A2B865C2CB6A08F004DFE02 /* MainTabView.swift in Sources */,
 				7A922EB22CB05687009F3E9C /* PostRow.swift in Sources */,
 				7AA0EAA92CAF33FC00A60F26 /* SocialcademyApp.swift in Sources */,
 				7A922EB52CB068E2009F3E9C /* NewPostForm.swift in Sources */,
