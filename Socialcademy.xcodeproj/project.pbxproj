@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7A2B865A2CB5A809004DFE02 /* PostRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B86592CB5A809004DFE02 /* PostRowViewModel.swift */; };
 		7A2B865C2CB6A08F004DFE02 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B865B2CB6A08E004DFE02 /* MainTabView.swift */; };
+		7A41B6222CBEF612001F22B8 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A41B6212CBEF612001F22B8 /* ViewModelFactory.swift */; };
 		7A922EAE2CB04D1D009F3E9C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A922EAD2CB04D1D009F3E9C /* Post.swift */; };
 		7A922EB02CB04EA6009F3E9C /* PostsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A922EAF2CB04EA6009F3E9C /* PostsList.swift */; };
 		7A922EB22CB05687009F3E9C /* PostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A922EB12CB05687009F3E9C /* PostRow.swift */; };
@@ -32,11 +33,13 @@
 		7AC3EE952CBD6655003BCB0F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3EE942CBD6655003BCB0F /* ProfileView.swift */; };
 		7AC3EE972CBD8AD6003BCB0F /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3EE962CBD8AD6003BCB0F /* FormViewModel.swift */; };
 		7AC3EE992CBDA16D003BCB0F /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3EE982CBDA16D003BCB0F /* PrimaryButtonStyle.swift */; };
+		7AC3EE9B2CBE8498003BCB0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3EE9A2CBE8498003BCB0F /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7A2B86592CB5A809004DFE02 /* PostRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRowViewModel.swift; sourceTree = "<group>"; };
 		7A2B865B2CB6A08E004DFE02 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		7A41B6212CBEF612001F22B8 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		7A922EAD2CB04D1D009F3E9C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		7A922EAF2CB04EA6009F3E9C /* PostsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsList.swift; sourceTree = "<group>"; };
 		7A922EB12CB05687009F3E9C /* PostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRow.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		7AC3EE942CBD6655003BCB0F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		7AC3EE962CBD8AD6003BCB0F /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		7AC3EE982CBDA16D003BCB0F /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		7AC3EE9A2CBE8498003BCB0F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				7A922EAD2CB04D1D009F3E9C /* Post.swift */,
+				7AC3EE9A2CBE8498003BCB0F /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 				7A2B86592CB5A809004DFE02 /* PostRowViewModel.swift */,
 				7AC3EE902CBD6341003BCB0F /* AuthViewModel.swift */,
 				7AC3EE962CBD8AD6003BCB0F /* FormViewModel.swift */,
+				7A41B6212CBEF612001F22B8 /* ViewModelFactory.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -292,8 +298,10 @@
 				7A2B865A2CB5A809004DFE02 /* PostRowViewModel.swift in Sources */,
 				7A922EBE2CB1CBB9009F3E9C /* Loadable.swift in Sources */,
 				7AC3EE912CBD6341003BCB0F /* AuthViewModel.swift in Sources */,
+				7A41B6222CBEF612001F22B8 /* ViewModelFactory.swift in Sources */,
 				7AC3EE932CBD653C003BCB0F /* AuthView.swift in Sources */,
 				7AA0EAAB2CAF33FC00A60F26 /* ContentView.swift in Sources */,
+				7AC3EE9B2CBE8498003BCB0F /* User.swift in Sources */,
 				7A922EC12CB1D3F3009F3E9C /* EmptyListView.swift in Sources */,
 				7AC3EE952CBD6655003BCB0F /* ProfileView.swift in Sources */,
 				7A2B865C2CB6A08F004DFE02 /* MainTabView.swift in Sources */,

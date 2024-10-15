@@ -30,7 +30,7 @@ class PostsViewModel: ObservableObject {
     
     private let postsRepository: PostsRepositoryProtocol
     
-    init(filter: Filter = .all, postsRepository: PostsRepositoryProtocol = PostsRepository()) {
+    init(filter: Filter = .all, postsRepository: PostsRepositoryProtocol) {
         self.postsRepository = postsRepository
         self.filter = filter
     }
@@ -46,14 +46,6 @@ class PostsViewModel: ObservableObject {
         }
     }
     
-    func makeCreateAction() -> NewPostForm.CreateAction {
-        return { [weak self] post in
-            try await self?.postsRepository.create(post)
-            self?.posts.value?.insert(post, at: 0)
-        }
-    }
-    
-    
     func makePostRowViewModel(for post: Post) -> PostRowViewModel {
         return PostRowViewModel(
             post: post,
@@ -66,6 +58,16 @@ class PostsViewModel: ObservableObject {
                 try await newValue ? self?.postsRepository.favorite(post) : self?.postsRepository.unfavorite(post)
                 guard let i = self?.posts.value?.firstIndex(of: post) else { return }
                 self?.posts.value?[i].isFavorite = newValue
+            }
+        )
+    }
+    
+    func makeNewPostViewModel() -> FormViewModel<Post> {
+        return FormViewModel(
+            initialValue: Post(title: "", content: "", author: postsRepository.user),
+            action: { [weak self] post in
+                try await self?.postsRepository.create(post)
+                self?.posts.value?.insert(post, at: 0)
             }
         )
     }

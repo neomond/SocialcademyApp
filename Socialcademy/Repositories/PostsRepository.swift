@@ -19,6 +19,8 @@ protocol PostsRepositoryProtocol {
     
     func favorite(_ post: Post) async throws
     func unfavorite(_ post: Post) async throws
+    
+    var user: User { get }
 }
 
 
@@ -27,6 +29,7 @@ protocol PostsRepositoryProtocol {
 #if DEBUG
 struct PostsRepositoryStub: PostsRepositoryProtocol {
     let state: Loadable<[Post]>
+    var user = User.testUser
     
     func fetchAllPosts() async throws -> [Post] {
         return try await state.simulate()
@@ -47,7 +50,8 @@ struct PostsRepositoryStub: PostsRepositoryProtocol {
 // MARK: - PostsRepository
 
 struct PostsRepository: PostsRepositoryProtocol {
-    let postsReference = Firestore.firestore().collection("posts_v1") /// version number
+    let postsReference = Firestore.firestore().collection("posts_v2") /// version number
+    let user: User
     
     private func fetchPosts(from query: Query) async throws -> [Post] {
         let snapshot = try await query
