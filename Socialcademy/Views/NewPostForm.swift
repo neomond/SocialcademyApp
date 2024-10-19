@@ -20,6 +20,7 @@ struct NewPostForm: View {
                 Section {
                     TextField("Title", text: $viewModel.title)
                 }
+                ImageSection(imageURL: $viewModel.imageURL)
                 Section("Content") {
                     TextEditor(text: $viewModel.content)
                         .multilineTextAlignment(.leading)
@@ -73,5 +74,27 @@ private extension NewPostForm {
 struct NewPostForm_Previews: PreviewProvider {
     static var previews: some View {
         NewPostForm(viewModel: FormViewModel(initialValue: Post.testPost, action: { _ in }))
+    }
+}
+
+private extension NewPostForm {
+    struct ImageSection: View {
+        @Binding var imageURL: URL?
+        
+        var body: some View {
+            Section("Image") {
+                AsyncImage(url: imageURL) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                } placeholder: {
+                    EmptyView()
+                }
+                ImagePickerButton(imageURL: $imageURL) {
+                    Label("Choose Image", systemImage: "photo.fill")
+                }
+            }
+        }
     }
 }
