@@ -9,7 +9,7 @@ import Foundation
 
 @MainActor
 @dynamicMemberLookup
-class FormViewModel<Value>: ObservableObject {
+class FormViewModel<Value>: ObservableObject, StateManager {
     typealias Action = (Value) async throws -> Void
     
     @Published var value: Value
@@ -41,9 +41,9 @@ class FormViewModel<Value>: ObservableObject {
 
 
     /// nonisolated is called synchronously without awaiting, as it doesn’t interact with the actor’s isolated state.
-   nonisolated func submit() {
-        Task {
-            await handleSubmit()
+    nonisolated func submit() {
+        withStateManagingTask { [self] in
+            try await action(value)
         }
     }
 }

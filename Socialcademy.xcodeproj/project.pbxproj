@@ -45,6 +45,8 @@
 		7AC3EE972CBD8AD6003BCB0F /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3EE962CBD8AD6003BCB0F /* FormViewModel.swift */; };
 		7AC3EE992CBDA16D003BCB0F /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3EE982CBDA16D003BCB0F /* PrimaryButtonStyle.swift */; };
 		7AC3EE9B2CBE8498003BCB0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3EE9A2CBE8498003BCB0F /* User.swift */; };
+		7AE5DB472CC56E3600DCB9A0 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5DB462CC56E3600DCB9A0 /* ProfileViewModel.swift */; };
+		7AE5DB492CC5767200DCB9A0 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5DB482CC5767200DCB9A0 /* ProfileImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +85,8 @@
 		7AC3EE962CBD8AD6003BCB0F /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		7AC3EE982CBDA16D003BCB0F /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		7AC3EE9A2CBE8498003BCB0F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7AE5DB462CC56E3600DCB9A0 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		7AE5DB482CC5767200DCB9A0 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 				7A41B6212CBEF612001F22B8 /* ViewModelFactory.swift */,
 				7A41B6292CC0D667001F22B8 /* CommentsViewModel.swift */,
 				7A41B62F2CC125DF001F22B8 /* CommentRowViewModel.swift */,
+				7AE5DB462CC56E3600DCB9A0 /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				7A922EC02CB1D3F3009F3E9C /* EmptyListView.swift */,
 				7A922ED22CB45EF4009F3E9C /* Alert+Error.swift */,
 				7AC3EE982CBDA16D003BCB0F /* PrimaryButtonStyle.swift */,
+				7AE5DB482CC5767200DCB9A0 /* ProfileImage.swift */,
 			);
 			path = " SupportingViews";
 			sourceTree = "<group>";
@@ -339,10 +345,12 @@
 				7A41B6242CC0D2CD001F22B8 /* Comment.swift in Sources */,
 				7A41B62C2CC0D72F001F22B8 /* CommentsList.swift in Sources */,
 				7A41B6262CC0D337001F22B8 /* CommentsRepository.swift in Sources */,
+				7AE5DB472CC56E3600DCB9A0 /* ProfileViewModel.swift in Sources */,
 				7AC3EE9B2CBE8498003BCB0F /* User.swift in Sources */,
 				7A922EC12CB1D3F3009F3E9C /* EmptyListView.swift in Sources */,
 				7A41B6302CC125DF001F22B8 /* CommentRowViewModel.swift in Sources */,
 				7AC3EE952CBD6655003BCB0F /* ProfileView.swift in Sources */,
+				7AE5DB492CC5767200DCB9A0 /* ProfileImage.swift in Sources */,
 				7A2B865C2CB6A08F004DFE02 /* MainTabView.swift in Sources */,
 				7A922EB22CB05687009F3E9C /* PostRow.swift in Sources */,
 				7A41B6322CC12845001F22B8 /* ErrorHandler.swift in Sources */,
